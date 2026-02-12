@@ -105,3 +105,8 @@ Context:
 
     with st.chat_message("assistant"):
         st.markdown(response_text)
+
+documents = st.session_state.vector_store
+results = simple_search(documents, prompt)
+context = "\n\n".join(results)
+
