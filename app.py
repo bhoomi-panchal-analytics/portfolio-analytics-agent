@@ -3,7 +3,12 @@ import openai
 import os
 from utils import load_and_index_pdfs, calculate_sharpe_ratio
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
+import os
+from openai import OpenAI
+
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 st.set_page_config(page_title="Finance Domain Chatbot", layout="wide")
 
