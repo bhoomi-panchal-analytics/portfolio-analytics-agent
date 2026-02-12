@@ -16,6 +16,7 @@ if not api_key:
     st.error("OPENAI_API_KEY not found. Add it in Streamlit Secrets.")
     st.stop()
 
+
 client = OpenAI(api_key=api_key)
 
 # ----------------------------
